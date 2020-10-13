@@ -56,3 +56,57 @@ i {
 
 /* END OF NAVBAR STYLING */
 
+/* Start of Main styling / Products. */
+
+main {
+    display: flex;
+    padding: 50px;
+}
+
+.productCardContainer {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFFFF;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+.productCard {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+      
+}
+
+.productDescription {
+    text-align: center;
+    color: #212121;
+    font-weight: bold;
+    
+}
+
+.priceOfProduct {
+    text-align: center;
+    color: #212121;
+}
+
+img {
+    height: 340px;
+    width: 200px;
+    object-fit: contain;
+    background-position: center;
+    
+
+}
+
+.titleOfProduct {
+    color: #212121;
+    text-align: center;  
+}

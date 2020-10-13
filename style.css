@@ -22,17 +22,18 @@ body {
     flex-grow: 6;
     justify-content: flex-start;
     align-items: center;
-    margin: 5px;
+    margin: 15px;
     color: #FFFFFF;
 }
 
-h1 {
+#logoText {
     color: #FFFFFF;
 }
 
 
  a {
      text-decoration: none;
+     color: #FFFFFF;
  }
 
 
@@ -46,7 +47,7 @@ h1 {
 i {
     font-size: 30px;
     color: #FFFFFF;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 #purchase {
@@ -56,3 +57,25 @@ i {
 
 /* END OF NAVBAR STYLING */
 
+/* KUNDVAGNSSIDA */
+
+#kundDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#kundText {
+    color: #212121;
+    font-size: 40px
+}
+
+#fontAwesome {
+    color: #212121;
+    font-size: 30px;
+
+}
+
+
+
+/* END OF KUNDVAGNSSIDA */

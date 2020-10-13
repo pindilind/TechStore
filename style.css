@@ -89,12 +89,15 @@ main {
     text-align: center;
     color: #212121;
     font-weight: bold;
+    margin: 10px;
+    font-size: 12px;
     
 }
 
 .priceOfProduct {
     text-align: center;
     color: #212121;
+    margin: 10px;
 }
 
 img {
@@ -108,5 +111,6 @@ img {
 
 .titleOfProduct {
     color: #212121;
-    text-align: center;  
+    text-align: center; 
+    margin: 0px;
 }

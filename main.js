@@ -23,18 +23,13 @@ function initSite() {
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
-       
-    let body = document.getElementsByTagName("body")[0]
     
-    
-    let productcardContainer = document.createElement("div")
-    productcardContainer.classList = "productCardContainer"
-
     for (let i = 0; i < listOfProducts.length; i++) {
         let productList = listOfProducts[i]; 
     
      /* Creating respective elements for all information taken from Product list */
+        let productcardContainer = document.createElement("div")
+     
         let productCard = document.createElement("div")  
    
         let productTitle = document.createElement("h1")
@@ -50,6 +45,7 @@ function addProductsToWebpage() {
         productPrice.innerText = productList.price + " " + "kr" 
 
         /* Classlists for styling in css */
+        productcardContainer.classList = "productCardContainer"
         productPrice.classList = "priceOfProduct"
         productDesc.classList = "productDescription"
         productCard.classList = "productCard"
@@ -66,11 +62,11 @@ function addProductsToWebpage() {
         productCard.appendChild(productPrice)
 
         productcardContainer.appendChild(productCard)
-         
+
+        let main = document.getElementsByTagName("main")[0]
+        main.appendChild(productcardContainer)  
     }
-    /* Appending to main */
-     let main = document.getElementsByTagName("main")[0]
-     main.appendChild(productcardContainer)
+    
      
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have

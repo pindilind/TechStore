@@ -44,12 +44,23 @@ function addProductsToWebpage() {
         let productPrice = document.createElement("b")
         productPrice.innerText = productList.price + " " + "kr" 
 
+        let cartButton = document.createElement("button")
+        cartButton.innerText = "Lägg till i kundvagnen"
+        cartButton.onclick = function() {
+            document.getElementsByClassName(cartButton)
+            document.getElementById("purchase")
+            console.log("")
+        }
+    
+
+        
         /* Classlists for styling in css */
         productcardContainer.classList = "productCardContainer"
         productPrice.classList = "priceOfProduct"
         productDesc.classList = "productDescription"
         productCard.classList = "productCard"
         productTitle.classList = "titleOfProduct"
+        cartButton.classList = "startViewButton"
         
 
         /* Appending my productcards to show up on webpage */
@@ -61,12 +72,19 @@ function addProductsToWebpage() {
 
         productCard.appendChild(productPrice)
 
+        productCard.appendChild(cartButton)
+
         productcardContainer.appendChild(productCard)
 
         let main = document.getElementsByTagName("main")[0]
-        main.appendChild(productcardContainer)  
+        main.appendChild(productcardContainer)
+
+
     }
-    
+
+    /* PURCHASE FUNKTION /STARTVIEW */
+ 
+   
      
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have

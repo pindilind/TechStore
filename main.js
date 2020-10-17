@@ -47,8 +47,6 @@ function addProductsToWebpage() {
         let cartButton = document.createElement("button")
         cartButton.innerText = "Lägg till i kundvagnen"
         cartButton.onclick = function() {
-            document.getElementsByClassName(cartButton)
-            document.getElementById("purchase")
             console.log("")
         }
     

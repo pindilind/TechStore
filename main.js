@@ -46,11 +46,12 @@ function addProductsToWebpage() {
 
         let cartButton = document.createElement("button")
         cartButton.innerText = "Lägg till i kundvagnen"
-        cartButton.onclick = function() {
-            console.log("")
+        cartButton.onclick = itemClick
+        function itemClick() {
+            document.getElementById('purchase').innerText = "test"
         }
-    
 
+        
         
         /* Classlists for styling in css */
         productcardContainer.classList = "productCardContainer"

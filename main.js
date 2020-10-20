@@ -39,7 +39,7 @@ function addProductsToWebpage() {
         productDesc.innerText = productList.description
     
         let productImage = document.createElement("img")
-        productImage.src = "/assets/" + productList.image
+        productImage.src = "/Techstore/assets/" + productList.image
 
         let productPrice = document.createElement("b")
         productPrice.innerText = productList.price + " " + "kr" 

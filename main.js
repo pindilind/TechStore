@@ -50,7 +50,8 @@ function addProductsToWebpage() {
         iconCart.classList = "fas fa-cart-arrow-down"
 
         let cartButton = document.createElement("button")
-        cartButton.innerText = "Lägg till i kundvagnen"
+        let buttonText = document.createElement("h3")
+        buttonText.innerText = "Lägg till i kundvagnen"
         cartButton.data = productList
         cartButton.onclick = function() {
             addProductsToCArt(this.data)
@@ -78,8 +79,11 @@ function addProductsToWebpage() {
         productCard.appendChild(productPrice)
 
         productCard.appendChild(cartButton)
-
+        
         cartButton.appendChild(iconCart)
+
+        cartButton.appendChild(buttonText)
+
 
         productcardContainer.appendChild(productCard)
 

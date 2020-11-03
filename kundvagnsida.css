@@ -70,50 +70,58 @@ body {
 main {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding-top: 200px;
+    justify-content: center;
+}
+#kundvagnTitle {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -100px;
+}
+
+h1 {
+    font-size: 40px;
 }
 
 .productCardContainer {
-    width: 100vw;
-    height: 90vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
     align-items: center;
     flex-wrap: wrap; 
+    margin: 5px;
     
+
 }
 
 .productCard {
-    width: 100vw;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #5596F5;
+    padding: 5px;
+    border-radius: 12px;
+    font-weight: bolder;
 }
 
-
-.productDescription {
-    text-align: center;
-    color: #212121;
-    font-weight: bold;
-    margin: 10px;
-    font-size: 12px;
-    
-}
 
 .priceOfProduct {
     text-align: center;
     color: #212121;
-    margin: 10px;
+    margin: 3px;
+    font-weight: bold;
 }
 
 img {
-    height: 340px;
-    width: 200px;
+    height: 170px;
+    width: auto;
     object-fit: contain;
     background-position: center;
-    
 
 }
 
@@ -126,20 +134,20 @@ img {
 
 /* START OF BUTTONSTYLING STARTVIEW */
 
-.startViewButton {
+.removeCartItems {
     display: flex;
-    background-color: #5596F5;
+    background-color: #E64E4E;
     color: #FFFFFF;
     border-radius: 8px;
     border: none;
-    width: 20vw;
-    height: 6vh;
+    width: 9vw;
+    height: 4vh;
     align-items: center;
     justify-content: center;
+    margin: 8px;
 
 }
 
-h3 {
+h4 {
     margin: 10px;
 }
-

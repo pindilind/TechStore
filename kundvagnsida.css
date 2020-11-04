@@ -164,3 +164,16 @@ section {
 b {
     color: #212121;
 }
+
+.purchaseBtn {
+    width: 10vw;
+    height: 6vh;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #5596F5;
+    border: none;
+    border-radius: 5px;
+}

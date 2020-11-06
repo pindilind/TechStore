@@ -93,3 +93,26 @@ function removeProducts(index) {
   localStorage.setItem('listOfProducts', JSON.stringify(removeItem))
   window.location = "kundvagnsida.html"
 }
+
+function totalprice() {
+  let priceOfProduct = JSON.parse(localStorage.getItem("listOfProducts"))
+  let totalprice = 0
+  for (let i = 0; i < priceOfProduct.length; i++) {
+     totalprice += priceOfProduct[i].price;    
+  }
+  
+      let section = document.getElementsByTagName("section")[0]
+
+      let totalprisText = document.createElement("b")
+      totalprisText.innerText = "Totalt pris:" + " " + totalprice + " " + "kr"
+
+    
+      
+      section.appendChild(totalprisText)
+      
+
+       return totalprice
+    
+  } 
+
+totalprice()

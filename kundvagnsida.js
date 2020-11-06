@@ -93,23 +93,36 @@ function removeProducts(index) {
   localStorage.setItem('listOfProducts', JSON.stringify(removeItem))
   window.location = "kundvagnsida.html"
 }
-
+/* funktion som räknar ihop totala priset på produkterna i kundvagn */
 function totalprice() {
   let priceOfProduct = JSON.parse(localStorage.getItem("listOfProducts"))
   let totalprice = 0
   for (let i = 0; i < priceOfProduct.length; i++) {
      totalprice += priceOfProduct[i].price;    
   }
-  
+  /* appendar totalpris & slutförköp knapp i section */
       let section = document.getElementsByTagName("section")[0]
 
       let totalprisText = document.createElement("b")
       totalprisText.innerText = "Totalt pris:" + " " + totalprice + " " + "kr"
 
-    
+      let purchaseBtn = document.createElement("button")
+      let pbtnText = document.createElement("h4")
+      pbtnText.innerText = "Slutför ditt köp"  
+      let pbtnIcon = document.createElement("icon")
+      pbtnIcon.classList = "fas fa-check"
+      purchaseBtn.classList = "purchaseBtn"
+      purchaseBtn.appendChild(pbtnIcon)
+      purchaseBtn.appendChild(pbtnText)
+
+      purchaseBtn.onclick = function() {
+          localStorage.removeItem("listOfProducts")
+          alert("Tack för ditt köp")
+          window.location = "kundvagnsida.html"
+      }
       
       section.appendChild(totalprisText)
-      
+      section.appendChild(purchaseBtn)
 
        return totalprice
     

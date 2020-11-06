@@ -36,7 +36,7 @@ if(productList && productList.length) {
       productTitle.innerText = product.title
       
       let productImage = document.createElement("img")
-      productImage.src = "/assets/" + product.image
+      productImage.src = "/Techstore/assets/" + product.image
 
       let productPrice = document.createElement("h5")
       productPrice.innerText = product.price + " " + "kr"

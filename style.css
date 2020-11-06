@@ -92,6 +92,10 @@ main {
     align-items: center;
 }
 
+.productCard:hover {
+    background-color: #F5F5F5;
+}
+
 
 .productDescription {
     text-align: center;
@@ -113,8 +117,6 @@ img {
     width: 200px;
     object-fit: contain;
     background-position: center;
-    
-
 }
 
 .titleOfProduct {
@@ -142,4 +144,74 @@ img {
 h3 {
     margin: 10px;
 }
+/* mediaQ for phone */
+@media only screen and (max-width: 767.98px) {
+    .startViewButton {
+        display: flex;
+        background-color: #5596F5;
+        color: #FFFFFF;
+        border-radius: 8px;
+        border: none;
+        width: 75vw;
+        height: 6vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .productDescription {
+        text-align: center;
+        color: #212121;
+        font-weight: bold;
+        margin: 10px;
+        font-size: 10px;  
+    }
+    #logodiv {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 15px;
+    }
+}
+/* mediaQ for tablet / ipad pro */
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+    img {
+        height: 700px;
+        width: 400px;
+        
+    }
+    .productDescription {
+       
+        font-size: 20px;  
+    }
+    .titleOfProduct {
+    
+        font-size: 60px;
+    }
+    .startViewButton {      
+        width: 50vw;
+        height: 6vh;
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #headerTag {
+        
+        font-size: 60px;
+    }
+    #iconCart {
+        font-size: 50px;      
+        margin-right: 5px;
+    }
+    
+    #purchase {     
+        font-size: 60px;
+        margin-right: 5px;
+    }
+    .priceOfProduct {
+        font-size: 30px;
+    }
+  
+}
+
 

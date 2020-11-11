@@ -8,8 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-        
-        <!-- Link your stylesheet file/files, do NOT write styles in the html file! -->
         <script defer src="./main.js"></script>
         <link rel="stylesheet" href="style.css">
         
@@ -17,14 +15,50 @@
     <body onload="initSite()">
         <header id="header">
             <div id="logo"><a href="index.html"><h1 id="headerTag">TechStore</h1></a></div>
-            <div id="logodiv"><h2 id="purchase"></h2><a href="kundvagnsida.html"><i id="iconCart" class="fas fa-shopping-cart"></i></a></div>
-        
+            <div id="logodiv"><i id="signinIcon" class="fas fa-user" onclick="openNav()"></i></div>
+            <div id="logodiv"><h2 id="purchase"></h2><a href="kundvagnsida.html"><i id="iconCart" class="fas fa-shopping-cart"></i></a></div>  
         </header>
+
+        <!-- nav is the menu -->
+        <nav>
+            <div id="menu">
+            <button class="nav-item" onclick="openForm()">Log-in or create account</button>
+            <a href="myorders.html"><button class="nav-item">My orders</button></a>
+            <button class="nav-item" onclick="logOut()">Log Out</button>
+            </div>
+            <div id="menu">
+                <button id="close-menu" onclick="closeNav()">Close Menu</button>
+            </div>
+        </nav>
+
+         <!-- Section is the login & register form -->
+         <section>
+            <div id="flexitem">
+                <h1 class="formHeader">LOG-IN</h1>
+                <form id="loginForm">
+                <input id="signinUsername" placeholder="username"> 
+                <input id="signinPassword" type="password" placeholder="password"> 
+                <button id="loginButton" value="login" id="SigninBtn">Sign in</button>
+                </form> 
+            </div>
+            
+             <div id="flexitem">
+                  <h1 class="formHeader">CREATE ACCOUNT</h1>
+                  <input id="registerUsername" placeholder="Choose a username">
+                  <input id="registerPassword" placeholder="Choose your password">   
+                  <button id="registerButton">Register</button>   
+                  <button id="closebtn" onclick="closeForm()">Close</button>
+             </div>
+                
+
+        </section>
+
+
 
         <main>
             <!-- Add the content of your site here via javascript -->
         </main>
-        <footer></footer>
+        
             
     </body>
 </html>

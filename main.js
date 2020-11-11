@@ -57,7 +57,7 @@ function addProductsToWebpage() {
             addProductsToCArt(this.data)
           
         }
-        updateNumberToCart()
+        
 
         
         /* Classlists for styling in css */
@@ -93,38 +93,138 @@ function addProductsToWebpage() {
 
     }
 
-    //PURCHASE FUNKTION /STARTVIEW 
-    //ADD PRODUCT TO LOCAL STORAGE
+    updateNumberToCart()
+
+    /* Funktion för att lägga till produkt i varukorg */ 
     function addProductsToCArt(addProduct) {
-        let productList = [addProduct]
-        if(localStorage.getItem('listOfProducts')) {
-           productList = JSON.parse(localStorage.getItem('listOfProducts')); 
-           productList.push(addProduct)
-        }
-        
-        localStorage.setItem("listOfProducts", JSON.stringify(productList))
-        updateNumberToCart()
+        currentUser = sessionStorage.getItem("successLogin")
+        let productList = localStorage.getItem("userList")
+        productList = JSON.parse(productList)
+    
+        for (let i = 0; i < productList.length; i++) {
+                       
+        if(currentUser == productList[i].name) {
+                let product = productList[i]
+                product.cart.push(addProduct) 
+                localStorage.setItem("userList", JSON.stringify(productList))   
+                updateNumberToCart()
+       }
+     }
     }
-    //PRINTING PRODUCTS ON PAGE
+    
 
     function updateNumberToCart() {
-      let productList = JSON.parse(localStorage.getItem("listOfProducts"));
-      if(productList) 
-      document.getElementById('purchase').innerText = productList.length
-
-    } 
-
+        let currentUser = sessionStorage.getItem("successLogin") 
+        let productList = JSON.parse(localStorage.getItem("userList"))
+        for (let i = 0; i < productList.length; i++) {
+            const cart = productList[i].cart        
+            if(currentUser == productList[i].name)
+            document.getElementById("purchase").innerText = cart.length
+            else {
+                document.getElementById("purchase").innerText = null
+            }
+        }       
+    }    
+    
     }
 
-
+/* Reguser & login funktioner nedan */
+function openNav() {
+    document.getElementsByTagName("nav")[0].style.display = "block"    
+   }
+ 
+ function closeNav() {
+     document.getElementsByTagName("nav")[0].style.display = "none"   
+ }  
+ 
+ function openForm() {
+     document.getElementsByTagName("section")[0].style.display = "block"
+     document.getElementsByTagName("nav")[0].style.display = "none"
+ } 
+   
+   function closeForm() {
+     document.getElementsByTagName("section")[0].style.display = "none";
+   }
+ 
+   document.getElementById('loginButton').addEventListener("click", login)
+   document.getElementById("registerButton").addEventListener("click", regUser)  
+ 
+   function getUserList() {
+     let userList = localStorage.getItem("userList")
+     /* creating a list if there is none */
+     if(userList == null) {
+          userList = []
+ }   else  {
+     userList = JSON.parse(userList)
+ }
+     return userList
+ }
+ /* Save array to localstorage */
+ function saveUserList(saveUserList) {
+     localStorage.getItem("userList",JSON.stringify(saveUserList))
+ }
+ 
+ /* function for regging users, pushes a new "person" to the userList in localstorage. */
+ function regUser() {
+     let regUsername = document.getElementById("registerUsername").value
+     let regPassword = document.getElementById("registerPassword").value
+     
+     let cart = []
+     let orders = []
+    
+     let newUser = getUserList()
+     let newAcc = {
+         name: regUsername,
+         password: regPassword,
+         cart: cart,
+         orders: orders
+     }
+     newUser.push(newAcc)
+     localStorage.setItem("userList", JSON.stringify(newUser))
+     saveUserList(newUser)
+  
+ }
+ /* Checking if the username & password exist, returning true or false */
+ function checkUser(nameToCheck, passwordtoCheck) { 
+     let myList = getUserList() 
+     
+     nameList = false
+     for(i = 0; i < myList.length; i++){
+         if(nameToCheck == myList[i].name && passwordtoCheck == myList[i].password) {
+             nameList = true
+         }
+     }
+     return nameList
+ }
+ 
+ /* Login-function, fetches value from login-inputs, calling checkUser, if a match = successLogin */
+ function login() {
+     let userName = document.getElementById("signinUsername").value
+     let userPass = document.getElementById("signinPassword").value
+     checkUser(userName, userPass)
+       if (nameList == true) {
+          sessionStorage.setItem("successLogin", userName) 
+          localStorage.setItem("successLogin", userName) 
+          alert("Välkommen " +userName)
+         
+       } else {
+         alert('Invalid login!');
+        
+       }
+     }
+ 
+ function logOut() {
+     localStorage.removeItem("successLogin")
+     sessionStorage.removeItem("successLogin")
+     window.location = "index.html"   
+ }
+ 
     
     
 
  
 
  
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.   // TODO: Remove the console.log and these comments when you've read them.
+   
     
 

@@ -214,4 +214,123 @@ h3 {
   
 }
 
+/* log-in and register styling */
+#signinIcon {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    
+}
 
+#signinIcon:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+nav {
+    padding-top: 80px;
+    width: 100vw;
+    display: none;
+}
+
+.nav-item {
+    width: 10vw;
+    height: 8vh;
+    margin-left: 2px;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color: #212121
+}
+
+.nav-item:hover {
+    background-color: black;
+}
+
+#close-menu {
+    width: 31vw;
+    margin-top: 2px;
+    height: 4vh;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color: #212121
+}
+
+#close-menu:hover {
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+
+
+section {
+    display: none;
+    padding-top: 100px;
+    
+}
+
+#closebtn {
+    margin-top: 10px;
+    width: 8vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color: rgba(128, 0, 0, 0.781);
+}
+
+#flexitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+#registerButton {
+    margin-top: 10px;
+    width: 8vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color:  #212121
+}
+
+#loginButton { 
+    width: 5vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 10px;
+    font-family: cursive;
+    color: white;
+    background-color:  #212121
+}
+
+input {
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#registerUsername {
+    margin: 5px;
+}
+
+.formHeader {
+    color: #212121;
+}

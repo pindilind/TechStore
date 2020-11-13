@@ -82,8 +82,13 @@ main {
     background-color: #FFFFFF;
     align-items: center;
     flex-wrap: wrap; 
-    
 }
+
+.productCardContainer:nth-of-type(odd) {
+    background-color: #F5F5F5;
+}
+
+
 
 .productCard {
     width: 100vw;
@@ -92,9 +97,6 @@ main {
     align-items: center;
 }
 
-.productCard:hover {
-    background-color: #F5F5F5;
-}
 
 
 .productDescription {
@@ -126,6 +128,7 @@ img {
 }
 
 
+
 /* START OF BUTTONSTYLING STARTVIEW */
 
 .startViewButton {
@@ -144,12 +147,134 @@ img {
 h3 {
     margin: 10px;
 }
+
+
+/* log-in and register styling */
+#signinIcon {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    
+}
+
+#signinIcon:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+nav {
+    padding-top: 80px;
+    width: 100vw;
+    display: none;
+}
+
+.nav-item {
+    width: 10vw;
+    height: 8vh;
+    margin-left: 2px;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #212121
+}
+
+.nav-item:hover {
+    background-color: black;
+}
+
+#close-menu {
+    width: 25vw;
+    margin-top: 2px;
+    height: 5vh;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #E64E4E;;
+}
+
+#close-menu:hover {
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+
+
+section {
+    display: none;
+    padding-top: 100px;
+    
+}
+
+#closebtn {
+    margin-top: 10px;
+    width: 8vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #E64E4E;
+}
+
+#flexitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+#registerButton {
+    margin-top: 10px;
+    width: 8vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color:  #212121;
+}
+
+#loginButton { 
+    width: 5vw;
+    height: 5vh; 
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color:  #212121
+}
+
+input {
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#registerUsername {
+    margin: 5px;
+}
+
+.formHeader {
+    color: #212121;
+}
+
+
+
 /* mediaQ for phone */
 @media only screen and (max-width: 767.98px) {
     .startViewButton {
         display: flex;
-        background-color: #5596F5;
-        color: #FFFFFF;
         border-radius: 8px;
         border: none;
         width: 75vw;
@@ -171,7 +296,104 @@ h3 {
         align-items: center;
         margin-right: 15px;
     }
+
+/* STYLE LOG-IN /REGISTER IPHONE */
+
+#signinIcon {
+    font-size: 25px;
+    margin-right: 5px;
+    
 }
+
+#signinIcon:hover {
+    font-size: 30px;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+.nav-item {
+    width: 20vw;
+    height: 6vh;
+    margin-left: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#menu {
+   margin-top: 70px;
+    width: 100vw;
+  
+}
+
+#close-menu {
+    width: 61vw;
+    height: 3vh;
+    border: none;
+    font-size: 10px;
+    margin-top: -68px;
+  
+}
+
+
+/* --NEXT MENY- */
+  
+section {
+    display: none;
+    padding-top: 50px;
+    
+}
+
+#closebtn {
+    font-size: 15px;
+    width: 25vw;
+    height: 4vh;
+    
+}
+
+#flexitem {
+    margin-top: 30px;
+}
+
+#registerButton {
+    width: 25vw;
+    height: 4vh;
+    font-size: 15px;
+}
+
+#loginButton { 
+    width: 20vw;
+    height: 3vh; 
+    font-size: 15px;
+    
+}
+
+input {
+    width: 35vw;
+    height: 3vh;
+}
+
+
+#registerPassword {
+    margin: 2px;
+    width: 50vw;
+}
+
+
+#registerUsername {
+    margin: 2px;
+    width: 50vw;
+}
+
+.formHeader {
+    font-size: 20px;
+}
+
+
+}
+
+
 /* mediaQ for tablet / ipad pro */
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
     img {
@@ -211,66 +433,44 @@ h3 {
     .priceOfProduct {
         font-size: 30px;
     }
-  
-}
 
-/* log-in and register styling */
+    /* STYLE LOG-IN /REGISTER MEDIA IPAD*/
+
+
 #signinIcon {
-    font-size: 25px;
-    color: #FFFFFF;
+    font-size: 50px;
     margin-right: 5px;
     
 }
 
 #signinIcon:hover {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 nav {
-    padding-top: 80px;
+    padding-top: 60px;
     width: 100vw;
     display: none;
 }
 
 .nav-item {
-    width: 10vw;
-    height: 8vh;
-    margin-left: 2px;
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color: #212121
-}
-
-.nav-item:hover {
-    background-color: black;
+    width: 20vw;
+    height: 6vh;
+    font-size: 20px;
+    margin-top: 90px;
 }
 
 #close-menu {
-    width: 31vw;
-    margin-top: 2px;
-    height: 4vh;
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color: #212121
-}
-
-#close-menu:hover {
-    background-color: black;
-}
-
-#menu {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
+    width: 60vw;
+    height: 3vh;
+    font-size: 23px;
+  
 }
 
 
-
+/* --NEXT MENY- */
+  
 section {
     display: none;
     padding-top: 100px;
@@ -278,14 +478,10 @@ section {
 }
 
 #closebtn {
-    margin-top: 10px;
-    width: 8vw;
-    height: 5vh; 
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color: rgba(128, 0, 0, 0.781);
+    margin-top: 5px;
+    font-size: 15px;
+    width: 13vw;
+    height: 3vh; 
 }
 
 #flexitem {
@@ -293,34 +489,29 @@ section {
     flex-direction: column;
     align-items: center;
     width: auto;
+    margin-top: 40px;
 }
 
 #registerButton {
-    margin-top: 10px;
-    width: 8vw;
-    height: 5vh; 
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color:  #212121
+    margin-top: 5px;
+    width: 13vw;
+    height: 3vh;
+    font-size: 15px;
+    
 }
 
 #loginButton { 
-    width: 5vw;
-    height: 5vh; 
+    width: 13vw;
+    height: 3vh; 
     border: none;
-    border-radius: 10px;
-    font-family: cursive;
-    color: white;
-    background-color:  #212121
+    font-size: 15px;
+   
 }
 
 input {
-    padding: 5px;
-    border: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    width: 25vw;
+    height: 3vh;
+    font-size: 20px;
 }
 
 button:hover {
@@ -329,8 +520,23 @@ button:hover {
 
 #registerUsername {
     margin: 5px;
+    font-size: 20px;
 }
+
+#registerPassword {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
 
 .formHeader {
     color: #212121;
+    font-size: 40px;
 }
+
+
+
+
+}
+

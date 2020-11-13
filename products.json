@@ -19,5 +19,35 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
+    },{
+        "title": "Iphone 12 Pro",
+        "description": "Lates from apple, faster and better",
+        "image": "iphone12pro.png",
+        "price": 12588
+    },{
+        "title": "Galaxy Z Flip",
+        "description": "The new and cool phone from Samsung",
+        "image": "galaxyzflip.png",
+        "price": 10859
+    },{
+        "title": "Iphone SE",
+        "description": "With iPhone SE, you get Apple's most powerful chip",
+        "image": "iphoneSe.png",
+        "price": 4999
+    },{
+        "title": "Sony Xperia L4",
+        "description": "The Sony Xperia L4 is the perfect multimedia device",
+        "image": "sonyxperial4.png",
+        "price": 11490
+    },{
+        "title": "Iphone 11",
+        "description": "Stylish, smart and has a battery that lasts all day",
+        "image": "iphone11.png",
+        "price": 7490
+    },{
+        "title": "Huawei Y6",
+        "description": "A simple but still very good phone",
+        "image": "huaweiy6.png",
+        "price": 1499
     }
 ]

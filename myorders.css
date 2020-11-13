@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+  /* NAVBAR STYLING */
+#header {
+    background-color: #212121;
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    position: fixed; top: 0; left: 0; right: 0;
+}
+
+#logo {
+    display: flex;
+    flex-grow: 6;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15px;
+    color: #FFFFFF;
+}
+
+#headertag {
+    color: #FFFFFF;
+    font-size: 36px;
+    
+}
+
+
+ a {
+     text-decoration: none;
+     color: #FFFFFF;
+ }
+
+
+#logodiv {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 35px;
+   
+}
+
+#headericon {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+#purchase {
+    color: #FFFFFF;
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+
+/* END OF NAVBAR STYLING */
+
+main {
+    /* width: 100vw;
+    height: 90vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 15vh;
+}
+
+.orderDiv {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 1px;
+    width: 100vw;
+    height: auto;
+    background-color:rgba(128, 128, 128, 0.808);
+     
+}
+
+.orderText {
+    display: flex;
+    justify-content: center;
+    color:  #212121;;
+}
+
+.ordersHeader {
+    color:  #212121;;
+}
+
+
+.priceOfProduct {   
+    text-align: center;
+    color: #212121;
+    margin-bottom: 15px;
+}
+
+.titleOfProduct {
+    color: #212121;
+    text-align: center; 
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+/* menu styling */
+#signinIcon {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    
+}
+
+#signinIcon:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+nav {
+    padding-top: 80px;
+    width: 100vw;
+    display: none;
+    
+}
+
+.nav-item {
+    width: 15vw;
+    height: 8vh;
+    margin-left: 2px;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color: #212121;
+    
+}
+
+.nav-item:hover {
+    background-color: black;
+}
+
+#close-menu {
+    width: 31vw;
+    margin-top: 2px;
+    height: 4vh;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    color: white;
+    background-color: #212121
+}
+
+#close-menu:hover {
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    
+}

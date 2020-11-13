@@ -1,6 +1,6 @@
 function initSite() { 
     updateNumberToCart()
-    printFromLocal()
+    addProductsFromLocal()
 }
 
 /* Öppna meny */
@@ -34,5 +34,69 @@ function logOut() {
     window.location = "index.html"   
 }
 
-let productsInCart = JSON.parse(localStorage.getItem('userList'));
+let users = JSON.parse(localStorage.getItem("userList"))
+  
+function addProductsFromLocal() {
+    let main = document.getElementsByTagName("main")[0]
+    let currentUser = sessionStorage.getItem("successLogin") 
+    let userObject
+
+    
+
+    for (let i = 0; i < users.length; i++) {
+       
+        
+        if(currentUser == users[i].name) {
+            userObject = users[i]
+                let ordersHeader = document.createElement("h1")
+                ordersHeader.innerText = "Dina senaste beställningar"
+                ordersHeader.classList = "ordersHeader"   
+                main.appendChild(ordersHeader)   
+             break
+          
+        }
+    }
+        for (let x = 0; x < userObject.orders.length; x++) {
+             let productList = userObject.orders[x]
+             let orderDiv = document.createElement("div")   
+             let orderText = document.createElement("h1")
+             orderText.innerText = "Order" + "#" + (x + 1) //printar ut ordrarna i nummer-ordning. 
+        
+                console.log("NewOrder")
+
+             for (let y = 0; y < productList.length; y++) {
+                 console.log(productList[y])
+
+               
+                 
+         let orderContainer = document.createElement("div")
+        
+        let productTitle = document.createElement("h1")
+        productTitle.innerText = productList[y].title
+
+        let productPrice = document.createElement("b")
+        productPrice.innerText = productList[y].price + " " + "kr" 
+
+       
+        
+        /* Appending elements to main*/
+        
+        orderContainer.appendChild(orderText)
+        orderDiv.appendChild(productTitle)
+        orderDiv.appendChild(productPrice)
+        orderContainer.appendChild(orderDiv) 
+        main.appendChild(orderContainer)
+
+          /* Classlists for styling in css */
+          orderContainer.classList = "orderContainer"
+          productPrice.classList = "priceOfProduct"
+          productTitle.classList = "titleOfProduct"
+          orderDiv.classList = "orderDiv"
+          orderText.classList = "orderText"
+       
+        }   
+    }     
+}
+
+
 

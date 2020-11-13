@@ -197,6 +197,104 @@ b {
         margin-right: 15px;
     }
 }
+
+/* STYLE LOG-IN /REGISTER IPHONE */
+
+#signinIcon {
+    font-size: 25px;
+    margin-right: 5px;
+    
+}
+
+#signinIcon:hover {
+    font-size: 30px;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+.nav-item {
+    width: 20vw;
+    height: 6vh;
+    margin-left: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#menu {
+   margin-top: 70px;
+    width: 100vw;
+  
+}
+
+#close-menu {
+    width: 61vw;
+    height: 3vh;
+    border: none;
+    font-size: 10px;
+    margin-top: -68px;
+  
+}
+
+
+/* --NEXT MENY- */
+  
+section {
+    display: none;
+    padding-top: 50px;
+    
+}
+
+#closebtn {
+    font-size: 15px;
+    width: 25vw;
+    height: 4vh;
+    
+}
+
+#flexitem {
+    margin-top: 30px;
+}
+
+#registerButton {
+    width: 25vw;
+    height: 4vh;
+    font-size: 15px;
+}
+
+#loginButton { 
+    width: 20vw;
+    height: 3vh; 
+    font-size: 15px;
+    
+}
+
+input {
+    width: 35vw;
+    height: 3vh;
+}
+
+
+#registerPassword {
+    margin: 2px;
+    width: 50vw;
+}
+
+
+#registerUsername {
+    margin: 2px;
+    width: 50vw;
+}
+
+.formHeader {
+    font-size: 20px;
+}
+
+
+
+
+
 /* mediaQ for tablet / ipad pro */
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
     main {
@@ -305,3 +403,107 @@ nav {
     justify-content: center;
     
 }
+
+/* STYLE LOG-IN /REGISTER MEDIA IPAD*/
+
+
+#signinIcon {
+    font-size: 50px;
+    margin-right: 5px;
+    
+}
+
+#signinIcon:hover {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+nav {
+    padding-top: 60px;
+    width: 100vw;
+    display: none;
+}
+
+.nav-item {
+    width: 20vw;
+    height: 6vh;
+    font-size: 20px;
+    margin-top: 90px;
+}
+
+#close-menu {
+    width: 60vw;
+    height: 3vh;
+    font-size: 23px;
+  
+}
+
+
+/* --NEXT MENY- */
+  
+section {
+    display: none;
+    padding-top: 100px;
+    
+}
+
+#closebtn {
+    margin-top: 5px;
+    font-size: 15px;
+    width: 13vw;
+    height: 3vh; 
+}
+
+#flexitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin-top: 40px;
+}
+
+#registerButton {
+    margin-top: 5px;
+    width: 13vw;
+    height: 3vh;
+    font-size: 15px;
+    
+}
+
+#loginButton { 
+    width: 13vw;
+    height: 3vh; 
+    border: none;
+    font-size: 15px;
+   
+}
+
+input {
+    width: 25vw;
+    height: 3vh;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#registerUsername {
+    margin: 5px;
+    font-size: 20px;
+}
+
+#registerPassword {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+
+.formHeader {
+    color: #212121;
+    font-size: 40px;
+}
+
+
+

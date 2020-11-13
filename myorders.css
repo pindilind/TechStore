@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     background-color: #FFFFFF;
@@ -5,11 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-  /* NAVBAR STYLING */
+/* #1 navbar-styling */
 #header {
     background-color: #212121;
     display: flex;
@@ -30,26 +29,22 @@ body {
 #headertag {
     color: #FFFFFF;
     font-size: 36px;
-    
 }
 
-
- a {
-     text-decoration: none;
-     color: #FFFFFF;
- }
-
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 #logodiv {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 35px;
-   
+    margin-right: 35px;  
 }
 
-#headericon {
+#iconCart {
     font-size: 25px;
     color: #FFFFFF;
     margin-right: 5px;
@@ -61,12 +56,62 @@ body {
     font-size: 30px;
 }
 
+/* #2 style order-menu */
+#signinIcon {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin-right: 5px; 
+}
 
-/* END OF NAVBAR STYLING */
+#signinIcon:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
 
+nav {
+    padding-top: 80px;
+    width: 100vw;
+    display: none;    
+}
+/* styles buttons in menu */
+.nav-item {
+    width: 15vw;
+    height: 8vh;
+    margin-left: 2px;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #212121;
+}
+
+.nav-item:hover {
+    background-color: black;
+}
+/* styles close-button */
+#close-menu {
+    width: 30vw;
+    margin-top: 2px;
+    height: 4vh;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #E64E4E;
+}
+
+#close-menu:hover {
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    width: 100vw;
+    justify-content: center; 
+}
+
+/* styling order-main */
 main {
-    /* width: 100vw;
-    height: 90vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,8 +126,7 @@ main {
     border-width: 1px;
     width: 100vw;
     height: auto;
-    background-color:rgba(128, 128, 128, 0.808);
-     
+    background-color:rgba(128, 128, 128, 0.808); 
 }
 
 .orderText {
@@ -94,7 +138,6 @@ main {
 .ordersHeader {
     color:  #212121;;
 }
-
 
 .priceOfProduct {   
     text-align: center;
@@ -110,60 +153,76 @@ main {
     font-size: 20px;
 }
 
-/* menu styling */
-#signinIcon {
+/* mediaQ for iphone X */
+@media only screen and (max-width: 767.98px) {
+/* styles header in order-startview with iphone X */
+.ordersHeader {
     font-size: 25px;
-    color: #FFFFFF;
-    margin-right: 5px;
-    
 }
 
-#signinIcon:hover {
-    cursor: pointer;
-    font-size: 30px;
-}
-
+/* styles menu in order-startview with iphone X */
 nav {
-    padding-top: 80px;
+    padding-top: 90px;
     width: 100vw;
     display: none;
-    
 }
-
+    
 .nav-item {
-    width: 15vw;
-    height: 8vh;
+    width: 20vw;
+    height: 6vh;
     margin-left: 2px;
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color: #212121;
-    
-}
-
-.nav-item:hover {
-    background-color: black;
 }
 
 #close-menu {
-    width: 31vw;
     margin-top: 2px;
-    height: 4vh;
-    border: none;
-    border-radius: 5px;
-    font-family: cursive;
-    color: white;
-    background-color: #212121
+    width: 40vw;
+    height: 3vh;
 }
-
-#close-menu:hover {
-    background-color: black;
-}
-
+    
 #menu {
     display: flex;
     width: 100vw;
-    justify-content: center;
+    justify-content: center; 
+} 
+}
+
+/* mediaQ for ipad pro */
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+/* styles navbar in order-startview width ipad pro */
+#signinIcon {
+    font-size: 50px;
+    margin-right: 5px;
+}
+       
+#headerTag {
+    font-size: 60px;
+}
+   
+#iconCart {
+    font-size: 50px;      
+    margin-right: 5px;
+}
+   
+#purchase {     
+    font-size: 60px;
+     margin-right: 5px;
+   }
+
+/* styles menu in order-startview with ipad pro */
+nav {
+    width: 100vw;
+    margin-top: 100px;
+}
+
+.nav-item {
+    width: 25vw;
+    height: 6vh;
+    font-size: 30px;
+}
     
+#close-menu {
+    width: 50vw;
+    height: 4vh;
+    font-size: 30px;
+}
 }

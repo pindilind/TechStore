@@ -1,23 +1,20 @@
-body {
-    margin: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
 * {
     box-sizing: border-box;
 }
 
-  /* NAVBAR STYLING */
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+  /* #1 navbar-styling */
 #header {
     background-color: #212121;
     display: flex;
     height: 10vh;
     width: 100vw;
-    position: fixed; top: 0; left: 0; right: 0;
-    
+    position: fixed; top: 0; left: 0; right: 0;   
 }
 
 #logo {
@@ -34,13 +31,10 @@ body {
     font-size: 36px;
 }
 
-
-
- a {
-     text-decoration: none;
-     color: #FFFFFF;
- }
-
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 #logodiv {
     display: flex;
@@ -62,99 +56,11 @@ body {
     margin-right: 5px;
 }
 
-
-/* END OF NAVBAR STYLING */
-
-/* Start of Main styling / Products. */
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 50px;
-}
-
-.productCardContainer {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #FFFFFF;
-    align-items: center;
-    flex-wrap: wrap; 
-}
-
-.productCardContainer:nth-of-type(odd) {
-    background-color: #F5F5F5;
-}
-
-
-
-.productCard {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-.productDescription {
-    text-align: center;
-    color: #212121;
-    font-weight: bold;
-    margin: 10px;
-    font-size: 12px;
-    
-}
-
-.priceOfProduct {
-    text-align: center;
-    color: #212121;
-    margin: 10px;
-}
-
-img {
-    height: 340px;
-    width: 200px;
-    object-fit: contain;
-    background-position: center;
-}
-
-.titleOfProduct {
-    color: #212121;
-    text-align: center; 
-    margin: 0px;
-}
-
-
-
-/* START OF BUTTONSTYLING STARTVIEW */
-
-.startViewButton {
-    display: flex;
-    background-color: #5596F5;
-    color: #FFFFFF;
-    border-radius: 8px;
-    border: none;
-    width: 20vw;
-    height: 6vh;
-    align-items: center;
-    justify-content: center;
-
-}
-
-h3 {
-    margin: 10px;
-}
-
-
-/* log-in and register styling */
+/* #2 log-in and register styling */
 #signinIcon {
     font-size: 25px;
     color: #FFFFFF;
     margin-right: 5px;
-    
 }
 
 #signinIcon:hover {
@@ -204,12 +110,9 @@ nav {
     justify-content: center;
 }
 
-
-
 section {
     display: none;
-    padding-top: 100px;
-    
+    padding-top: 100px;    
 }
 
 #closebtn {
@@ -269,40 +172,100 @@ button:hover {
     color: #212121;
 }
 
+/* #3 main styling / products */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
 
+.productCardContainer {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFFFF;
+    align-items: center;
+    flex-wrap: wrap; 
+}
 
-/* mediaQ for phone */
+.productCardContainer:nth-of-type(odd) {
+    background-color: #F5F5F5;
+}
+
+.productCard {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productDescription {
+    text-align: center;
+    color: #212121;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 12px;
+}
+
+.priceOfProduct {
+    text-align: center;
+    color: #212121;
+    margin: 10px;
+}
+
+img {
+    height: 340px;
+    width: 200px;
+    object-fit: contain;
+    background-position: center;
+}
+
+.titleOfProduct {
+    color: #212121;
+    text-align: center; 
+    margin: 0px;
+}
+
+/* #4 styling button, "Lägg till i kungvagn" */
+.startViewButton {
+    display: flex;
+    background-color: #5596F5;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    width: 20vw;
+    height: 6vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    margin: 10px;
+}
+
+/* mediaQ for iphone X */
 @media only screen and (max-width: 767.98px) {
-    .startViewButton {
-        display: flex;
-        border-radius: 8px;
-        border: none;
-        width: 75vw;
-        height: 6vh;
-        align-items: center;
-        justify-content: center;
-    }
-    .productDescription {
-        text-align: center;
-        color: #212121;
-        font-weight: bold;
-        margin: 10px;
-        font-size: 10px;  
-    }
-    #logodiv {
-        display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
-        align-items: center;
-        margin-right: 15px;
-    }
+/* styles navbar with iphone X */
+.startViewButton {
+    width: 75vw;
+    height: 6vh;
+}
 
-/* STYLE LOG-IN /REGISTER IPHONE */
+.productDescription {
+    margin: 10px;
+    font-size: 10px;  
+}
 
+#logodiv {
+    margin-right: 15px;
+}
+
+/* style log-in / register(menu 1) iphone X */
 #signinIcon {
     font-size: 25px;
-    margin-right: 5px;
-    
+    margin-right: 5px;   
 }
 
 #signinIcon:hover {
@@ -317,39 +280,32 @@ nav {
     width: 20vw;
     height: 6vh;
     margin-left: 2px;
-    border-radius: 5px;
     font-size: 10px;
 }
 
 #menu {
+   display: flex;
    margin-top: 70px;
-    width: 100vw;
-  
+   width: 100vw;
 }
 
 #close-menu {
     width: 61vw;
     height: 3vh;
-    border: none;
     font-size: 10px;
     margin-top: -68px;
-  
 }
 
-
-/* --NEXT MENY- */
-  
+/* style log-in / register(menu 2) iphone X */
 section {
     display: none;
-    padding-top: 50px;
-    
+    padding-top: 50px;   
 }
 
 #closebtn {
     font-size: 15px;
     width: 25vw;
     height: 4vh;
-    
 }
 
 #flexitem {
@@ -366,7 +322,6 @@ section {
     width: 20vw;
     height: 3vh; 
     font-size: 15px;
-    
 }
 
 input {
@@ -374,12 +329,10 @@ input {
     height: 3vh;
 }
 
-
 #registerPassword {
     margin: 2px;
     width: 50vw;
 }
-
 
 #registerUsername {
     margin: 2px;
@@ -389,63 +342,55 @@ input {
 .formHeader {
     font-size: 20px;
 }
-
-
 }
-
 
 /* mediaQ for tablet / ipad pro */
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
-    img {
-        height: 700px;
-        width: 400px;
-        
-    }
-    .productDescription {
-       
-        font-size: 20px;  
-    }
-    .titleOfProduct {
+/* styles main in ipad pro */
+img {
+    height: 700px;
+    width: 400px;
+}
+.productDescription {
+    font-size: 20px;  
+}
+
+.titleOfProduct {
+    font-size: 60px;
+}
+
+.startViewButton {      
+    width: 50vw;
+    height: 6vh;
+    font-size: 30px;
+}
     
-        font-size: 60px;
-    }
-    .startViewButton {      
-        width: 50vw;
-        height: 6vh;
-        font-size: 30px;
-    }
-    h3 {
-        font-size: 30px;
-    }
-    #headerTag {
-        
-        font-size: 60px;
-    }
-    #iconCart {
-        font-size: 50px;      
-        margin-right: 5px;
-    }
-    
-    #purchase {     
-        font-size: 60px;
-        margin-right: 5px;
-    }
-    .priceOfProduct {
-        font-size: 30px;
-    }
+h3 {
+    font-size: 30px;
+}
 
-    /* STYLE LOG-IN /REGISTER MEDIA IPAD*/
+#headerTag {
+    font-size: 60px;
+}
 
+#iconCart {
+    font-size: 50px;      
+    margin-right: 5px;
+}
 
+#purchase {     
+    font-size: 60px;
+    margin-right: 5px;
+}
+
+.priceOfProduct {
+    font-size: 30px;
+}
+
+/*style log-in / register(menu 1) in ipad pro*/
 #signinIcon {
     font-size: 50px;
     margin-right: 5px;
-    
-}
-
-#signinIcon:hover {
-    cursor: pointer;
-    font-size: 40px;
 }
 
 nav {
@@ -456,25 +401,21 @@ nav {
 
 .nav-item {
     width: 20vw;
-    height: 6vh;
-    font-size: 20px;
+    height: 7vh;
+    font-size: 27px;
     margin-top: 90px;
 }
 
 #close-menu {
     width: 60vw;
-    height: 3vh;
-    font-size: 23px;
-  
+    height: 4vh;
+    font-size: 30px; 
 }
 
-
-/* --NEXT MENY- */
-  
+/*style log-in  / register(menu 2) in ipad pro*/
 section {
     display: none;
-    padding-top: 100px;
-    
+    padding-top: 100px;  
 }
 
 #closebtn {
@@ -496,8 +437,7 @@ section {
     margin-top: 5px;
     width: 13vw;
     height: 3vh;
-    font-size: 15px;
-    
+    font-size: 15px;   
 }
 
 #loginButton { 
@@ -505,17 +445,12 @@ section {
     height: 3vh; 
     border: none;
     font-size: 15px;
-   
 }
 
 input {
     width: 25vw;
     height: 3vh;
     font-size: 20px;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 #registerUsername {
@@ -528,15 +463,9 @@ button:hover {
     margin: 5px;
 }
 
-
-
 .formHeader {
     color: #212121;
     font-size: 40px;
 }
-
-
-
-
 }
 

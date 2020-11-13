@@ -125,7 +125,7 @@ function totalprice() {
 } 
       let section = document.getElementsByTagName("section")[0]
 
-      let tomKundvagn = document.createElement("h1")
+      let tomKundvagn = document.createElement("h2")
       tomKundvagn.innerText = "Din kundvagn är tom!"
 
       let totalprisText = document.createElement("b")
@@ -193,12 +193,12 @@ function cartToOrders(order) {
 /* Öppna meny */
 function openNav() {
   document.getElementsByTagName("nav")[0].style.display = "block"
-     
+  document.getElementById('kundvagnTitle').style.display = 'none'   
  }
 
 function closeNav() {
    document.getElementsByTagName("nav")[0].style.display = "none"
-        
+   document.getElementById('kundvagnTitle').style.display = 'block'      
 }
 
 function logOut() {

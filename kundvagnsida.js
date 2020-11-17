@@ -1,6 +1,14 @@
 function initSite() {
-  updateNumberToCart();
-  printFromLocal()
+  currentUser = sessionStorage.getItem("successLogin")
+           
+    if(currentUser) {
+        printFromLocal()
+        updateNumberToCart();
+    }
+      else {
+        window.location = "index.html"
+        alert("Du måste logga in eller skapa ett konto")
+      }
 }
 
 

@@ -16,7 +16,6 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
-       
 }
 
 
@@ -53,9 +52,18 @@ function addProductsToWebpage() {
                     cartButton.data = productList
 
                         cartButton.onclick = function() {
-                            addProductsToCArt(this.data)
+                            currentUser = sessionStorage.getItem("successLogin")
+           
+                                if(currentUser) { //Om inloggad kör funktion productsToCart
+                                    addProductsToCArt(this.data)
+            
+        }
+                                    else {
+                                        productsToCartNoLogIn(this.data) //Annars kör funktion för att lägga till i varukorg utan att ej vara inloggad.
+                                    }  
+        }
           
-                        }
+                             
         
             /* Classlists for styling in css */
             productcardContainer.classList = "productCardContainer"
@@ -82,10 +90,10 @@ function addProductsToWebpage() {
 
 
 }
-
+  
     updateNumberToCart()
 
-    /* Funktion för att lägga till produkt i varukorg */ 
+// Funktion för att lägga till produkt i varukorg som inloggad.
 function addProductsToCArt(addProduct) {
     currentUser = sessionStorage.getItem("successLogin")
         let productList = localStorage.getItem("userList")
@@ -101,24 +109,39 @@ function addProductsToCArt(addProduct) {
                 }
         }
 }
+
+// funktion för att lägga till produkter i varukorg ej inloggad.
+function productsToCartNoLogIn(addProduct) {
+    currentUser = sessionStorage.getItem("successLogin")
+    let productList = [addProduct]
+        if(localStorage.getItem("guestCart")) {
+            productList = JSON.parse(localStorage.getItem('guestCart')); 
+                productList.push(addProduct)
+                 
+        }
+            localStorage.setItem("guestCart", JSON.stringify(productList))
+            updateNumberToCart()
+        
+}
     
 
 function updateNumberToCart() {
     let currentUser = sessionStorage.getItem("successLogin") 
-        let productList = JSON.parse(localStorage.getItem("userList"))
-
-            for (let i = 0; i < productList.length; i++) {
-                const cart = productList[i].cart
-
-                    if(currentUser == productList[i].name)
-                        document.getElementById("purchase").innerText = cart.length
-                            else {
-                                document.getElementById("purchase").innerText = null
-                            }
-                    }       
-            }    
-    
+       
+    if(currentUser) { //Räknar cart för inloggad användare. 
+    let productList = JSON.parse(localStorage.getItem("userList"))
+    for (let i = 0; i < productList.length; i++) {
+    const cart = productList[i].cart  
+    document.getElementById("purchase").innerText = cart.length
 }
+}
+    else {
+        let guestCart = JSON.parse(localStorage.getItem("guestCart")); //Räknar guestCart dvs ej inloggad. 
+        if(guestCart) 
+        document.getElementById('purchase').innerText = guestCart.length
+    }
+}          
+}    
 
 /* Reguser & login funktioner nedan */
 function openNav() {
@@ -138,8 +161,7 @@ function closeForm() {
     document.getElementsByTagName("section")[0].style.display = "none";
 }
  
-//Hämtar knappar för login/reg
-document.getElementById('loginButton').addEventListener("click", login)
+//Hämtar knapp för reg
 document.getElementById("registerButton").addEventListener("click", regUser)  
  
 function getUserList() {
@@ -181,11 +203,11 @@ function regUser() {
 
  /* Checking if the username & password exist, returning true or false */
 function checkUser(nameToCheck, passwordtoCheck) { 
-    let myList = getUserList() 
+    let userList = getUserList() 
      
      nameList = false
-        for(i = 0; i < myList.length; i++){
-            if(nameToCheck == myList[i].name && passwordtoCheck == myList[i].password) {
+        for(i = 0; i < userList.length; i++){
+            if(nameToCheck == userList[i].name && passwordtoCheck == userList[i].password) {
                 nameList = true
             }
         }
@@ -197,7 +219,7 @@ function login() {
     let userName = document.getElementById("signinUsername").value
     let userPass = document.getElementById("signinPassword").value
         checkUser(userName, userPass)
-            if (nameList == true) {
+            if(nameList == true) {
                 sessionStorage.setItem("successLogin", userName) 
                     localStorage.setItem("successLogin", userName) 
                         alert("Välkommen " +userName)
@@ -205,18 +227,41 @@ function login() {
                            else {
                                 alert('Invalid login!');
                             }
+                                
 }
+
+// funktion för att föra över guestCarten till user.cart när man loggar in.  
+function guestCartToUser() {
+    currentUser = sessionStorage.getItem("successLogin")
+    let userName = document.getElementById("signinUsername").value
+    let first = JSON.parse(localStorage.getItem("userList"))
+    let second = JSON.parse(localStorage.getItem("guestCart"))
+    
+            if(second) {
+                for (let i = 0; i < first.length; i++) {
+
+                    if(first[i].name == userName) { 
+                        let newCart = first[i].cart.concat(second) //Mergar guestCart till user.cart
+                        first[i].cart = newCart
+                        localStorage.setItem("userList", JSON.stringify(first))
+                        localStorage.removeItem("guestCart") 
+                }    
+            }
+                
+    }   
+       
+}   
  
 function logOut() {
     localStorage.removeItem("successLogin")
         sessionStorage.removeItem("successLogin")
             window.location = "index.html"   
 }
- 
-    
+
+
     
 
- 
+
 
  
    
